@@ -1,24 +1,23 @@
 import logo from './logo.svg';
 import './App.css';
+import MyButton from './components/MyButton';
+import Avatar from './components/Avatar';
 
 function App() {
+
+  const user = {
+    name: 'Christopher Robin',
+    imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTV6YMQLTJQKHu_ptClOW3VNFTP1KRLYSuTAmCe8JN1bKRL42b2AemxD_jp-b8s7cl3r_o&usqp=CAU”',
+    imageSize: 90,
+  }; 
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <MyButton title={"Add to cart"}/>
+    <MyButton title={"Find out more"}/>
+
+    <Avatar user={user}/>
+    </>
+    
   );
 }
 
